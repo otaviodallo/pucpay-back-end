@@ -1,0 +1,67 @@
+### Create a product
+POST http://localhost:3000/products HTTP/1.1
+Content-Type: multipart/form-data; boundary=MfnBoundry
+
+--MfnBoundry
+Content-Disposition: form-data; name="name"
+
+teste
+--MfnBoundry
+Content-Disposition: form-data; name="description"
+
+description de teste
+--MfnBoundry
+Content-Disposition: form-data; name="price"
+
+13
+--MfnBoundry
+Content-Disposition: form-data; name="image"; filename="1.jpg"
+Content-Type: image/jpeg
+
+< cerveja-gelada.jpg
+--MfnBoundry
+Content-Disposition: form-data; name="idRestaurant";
+
+1
+--MfnBoundry--
+
+
+
+### Find Restaurant Products
+GET http://localhost:3000/products/restaurant/1
+
+### Find all products
+GET http://localhost:3000/products/
+
+### Find one product
+GET http://localhost:3000/products/2
+
+### Delete a product
+DELETE http://localhost:3000/products/8
+
+### Update a product
+PUT http://localhost:3000/products/5 HTTP/1.1
+Content-Type: multipart/form-data; boundary=MfnBoundry
+
+--MfnBoundry
+Content-Disposition: form-data; name="name"
+
+Cerveja
+--MfnBoundry
+Content-Disposition: form-data; name="description"
+
+Gelada
+--MfnBoundry
+Content-Disposition: form-data; name="price"
+
+3.50
+--MfnBoundry
+Content-Disposition: form-data; name="image"; filename="coca-cola.jpg"
+Content-Type: image/jpeg
+
+< coca-cola.jpg
+--MfnBoundry
+Content-Disposition: form-data; name="restaurant_id";
+
+2
+--MfnBoundry--

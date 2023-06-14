@@ -1,0 +1,7 @@
+node_modules
+dist
+.DS_Store
+bd.sqlite
+requests-user.http
+requests.http
+requests-product.http
