@@ -2,23 +2,21 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersModule } from './users/users.module';
-import { User } from './users/user.entity';
-import { ProductsModule } from './products/products.module';
-import { Product } from './products/products.entity';
+import { UsersModule } from './modules/users/users.module';
+import { User } from './modules/users/user.entity';
+import { ProductsModule } from './modules/products/products.module';
+import { Product } from './modules/products/products.entity';
 import { MulterModule } from '@nestjs/platform-express';
-import { UserEntity } from './users/usertype.entity';
-import { OrdersModule } from './orders/orders.module';
-import { Ticket } from './orders/ticket.entity';
-import { Order } from './orders/order.entity';
-import { OrderProduct } from './orders/pedido-produto.entity';
+import { OrdersModule } from './modules/orders/orders.module';
+import { OrderProduct } from './modules/orders/order-product.entity';
+import { Order } from './modules/orders/order.entity';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       type: 'sqlite',
       database: 'bd.sqlite',
-      entities: [User, Product, UserEntity, Ticket, Order, OrderProduct],
+      entities: [User, Product, Order, OrderProduct],
       synchronize: true,
     }),
     MulterModule.register({

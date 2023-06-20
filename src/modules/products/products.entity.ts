@@ -10,8 +10,9 @@ import {
   AfterUpdate,
   OneToMany,
 } from 'typeorm';
-import { User } from 'src/users/user.entity';
-import { OrderProduct } from 'src/orders/pedido-produto.entity';
+
+import { User } from '../users/user.entity';
+import { OrderProduct } from '../orders/order-product.entity';
 
 @Entity()
 export class Product {

@@ -1,6 +1,6 @@
 import { AfterInsert, AfterRemove, AfterUpdate, Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
-import { OrderProduct } from "./pedido-produto.entity";
-import { User } from "src/users/user.entity";
+import { OrderProduct } from "./order-product.entity";
+import { User } from "../users/user.entity";
 
 @Entity()
 export class Order {

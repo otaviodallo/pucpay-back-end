@@ -2,10 +2,10 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, getManager } from 'typeorm';
 import { Order } from './order.entity';
-import { Product } from 'src/products/products.entity';
-import { OrderProduct } from './pedido-produto.entity';
-import { CreateOrderProductDto } from './dtos/create-order.dto';
-import { User } from 'src/users/user.entity';
+import { OrderProduct } from './order-product.entity';
+import { CreateOrderProductDto } from './dtos/create-order-product.dto';
+import { Product } from '../products/products.entity';
+import { User } from '../users/user.entity';
 
 @Injectable()
 export class OrdersService {
